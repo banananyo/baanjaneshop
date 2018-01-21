@@ -191,7 +191,7 @@ html, body {
 /* swiper */
 .swiper-container {
     width: 100%;
-    height: 300px;
+    height: 360px;
 }
 .swiper-pagination-bullet {
     width: 20px;
@@ -213,7 +213,7 @@ background: rgba(50,50,50,0.3);
 }
 .slider-image {
     width: 100%;
-    height: 300px;
+    height: 360px;
     object-fit: cover;
     object-position: center;
 }
@@ -318,4 +318,14 @@ background: rgba(50,50,50,0.3);
 /* footer-credit */
 .footer-credit-text {
     text-align: center;
+}
+
+
+/* i-bar */
+.i-bar-wrapper {
+    position: fixed;
+    background-color: black;
+    width: 20px;
+    top: 0;
+    right: 0;
 }

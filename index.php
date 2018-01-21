@@ -8,6 +8,11 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body>
+    <div class="i-bar-wrapper">
+        <div class="i-bar">
+            
+        </div>
+    </div>
     <div class="top-nav" >
         <div class="container">
             <div class="row" >
