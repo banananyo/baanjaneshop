@@ -1,23 +1,19 @@
-<?php $feature_class = "col-12 col-sm-6 col-md-3 col-lg-3"; ?>
 <div class="row row-eq-height">
-    <div class="<?php echo $feature_class; ?>">
-        <a class="feature-card">
-            <img class="feature-image" src="images/feature/15145319094014.jpg" alt="Card image cap">
-        </a>
+    <div class="col-12">
+        <div class="header-title">Promotion</div>
     </div>
-    <div class="<?php echo $feature_class; ?>">
-        <a class="feature-card">
-            <img class="feature-image" src="images/feature/15160977524765.png" alt="Card image cap">
-        </a>
-    </div>
-    <div class="<?php echo $feature_class; ?>">
-        <a class="feature-card">
-            <img class="feature-image" src="images/feature/15145319094014.jpg" alt="Card image cap">
-        </a>
-    </div>
-    <div class="<?php echo $feature_class; ?>">
-        <a class="feature-card">
-            <img class="feature-image" src="images/feature/15160999965547.jpg" alt="Card image cap">
-        </a>
-    </div>
+</div>
+<div class="row row-eq-height">
+<?php $feature_class = "col-12 col-sm-6 col-md-3 col-lg-3 col-marginbot"; 
+    $features = array("01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg");
+    $i=0;
+    while($i < count($features)) {?>
+        <div class="<?php echo $feature_class; ?>">
+            <a class="feature-card">
+                <img class="feature-image" src="images/feature/<?php echo $features[$i]?>" alt="<?php echo $features[$i]?>">
+            </a>
+        </div>
+        <?php 
+        $i++;
+    } ?>
 </div>

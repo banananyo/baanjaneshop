@@ -2,9 +2,21 @@ html, body {
     width: 100%;
     margin: 0;
     font-size: 12px;
+    padding-right:20px;
     background-color: #f7f7f7;
 }
-
+.col-marginbot{
+    margin-bottom: 10px;
+}
+.logo-link {
+    text-decoration: none !important;
+}
+.header-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 5px solid #e62e6b;
+}
 .top-nav {
     background: #f5f5f5;
     border-bottom: 1px solid #eee;
@@ -95,7 +107,7 @@ html, body {
     text-decoration: underline;
 }
 .line-sep {
-    border-left: 1px solid #868e96!important;
+    border-left: 1px solid #DDD !important;
     margin: 0px 10px;
     height: 14px;
 }
@@ -232,20 +244,22 @@ background: rgba(50,50,50,0.3);
 .feature-card {
     width: 100%;
     height: 180px;
-    border-radius: 5px;
-    overflow: hidden;
     transition: 0.5s;
     display: block;
 }
-.feature-card:hover {
+.feature-card:hover .feature-image{
     box-shadow: 0px 0px 15px 2px #aaa;
     cursor: pointer;
+    filter: grayscale(0%);
 }
 .feature-image {
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: grayscale(60%);
+    transition: 0.5s;
 }
 @media screen and (max-width: 991px) {
     .feature-card {
@@ -259,6 +273,7 @@ background: rgba(50,50,50,0.3);
     }
 }
 
+
 /* product */
 .product-card-wrapper {
     background-color: white;
@@ -269,6 +284,9 @@ background: rgba(50,50,50,0.3);
 .product-card-wrapper:hover .product-pre-add-to-cart-text {
     visibility: visible;
     opacity: 1;
+}
+.product-card-wrapper:hover .product-pre-image {
+    filter: grayscale(0%);
 }
 .product-card {
     text-align: center;
@@ -325,6 +343,8 @@ background: rgba(50,50,50,0.3);
     object-position: center;
     width: 100%;
     height: auto;
+    filter: grayscale(60%);
+    transition: 0.5s;
 }
 
 /* footer-credit */

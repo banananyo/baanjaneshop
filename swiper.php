@@ -1,10 +1,12 @@
+<?php $sliders = array("03.jpg", "01.jpg", "02.jpg");?>
 <!-- Slider main container -->
 <div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"><img src="images/slider/15159827664752.png" alt="" class="slider-image"></div>
-        <div class="swiper-slide"><img src="images/slider/15161021772070.jpg" alt="" class="slider-image"></div>
+        <?php $i=0; while($i < count($sliders)) { ?>
+            <div class="swiper-slide"><img src="images/slider/<?php echo $sliders[$i]; ?>" alt="<?php echo $sliders[$i]; ?>" class="slider-image"></div>
+        <?php $i++; } ?>
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>

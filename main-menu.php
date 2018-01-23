@@ -14,8 +14,12 @@
       </a>
     </span>
     <span >
-        <span class="line-sep text-secondary"></span>
+        <span class="line-sep"></span>
     </span>
     <a class="main-menu-link hoverable" href="#" class="text-white">หน้าแรก</a>
+    <a class="main-menu-link hoverable" href="#" class="text-white">สินค้าทั้งหมด</a>
+    <a class="main-menu-link hoverable" href="#" class="text-white">ค้นหาตัวแทน</a>
+    <a class="main-menu-link hoverable" href="#" class="text-white">เกี่ยวกับเรา</a>
+    <a class="main-menu-link hoverable" href="#" class="text-white">ติดต่อเรา</a>
   </div>
 </nav>

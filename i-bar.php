@@ -16,4 +16,10 @@
             <i class="fa fa-book side-menu-icon"></i>
         </a>
     </div>
+    <div class="divider-large"></div>
+    <div class="side-icon-wrapper">
+        <a href="#" data-toggle="tooltip" data-placement="left" title="ค้นหาตัวแทน" data-offset="0,10px">
+            <i class="fa fa-users side-menu-icon"></i>
+        </a>
+    </div>
 </div>

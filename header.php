@@ -1,10 +1,10 @@
 <div class="header d-flex flex-row justify-content-between align-items-stretch">
     <div class="logo-large">
-        <p>
+        <a href="index.php" class="logo-link">
             <span class="logo-text logo-text-prefix">Baan</span>
             <span class="logo-text logo-text-subfix">jane</span>
             <span class="logo-text-dotcom">.com</span>
-        </p>
+        </a>
     </div>
     <div class="header-search-wrapper d-flex flex-column ">
         <div class="header-search d-flex flex-row align-items-stretch justify-content-between">
@@ -15,9 +15,9 @@
             <input type="submit" class="search-button" value="ค้นหา" />
         </div>
         <div class="suggest-search">
-            <a href="#" class="text-secondary"><span class="underline-hover">ลิปมัน</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">ลิปแมท</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">ลิปแฟชั่น</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">sureeporn</span></a>
             <span class="line-sep text-secondary"></span>
             <a href="#" class="text-secondary"><span class="underline-hover">กระชับผิว</span></a>
             <span class="line-sep text-secondary"></span>
