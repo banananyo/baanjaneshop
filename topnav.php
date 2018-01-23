@@ -1,13 +1,13 @@
 <div class="topnav d-flex flex-row justify-content-between align-items-stretch">
     <div class="d-flex flex-row">
         <span>
-            <a href="#" class="icon-link text-secondary">
+            <a href="#" class="icon-link ">
                 <span><i class="fa fa-facebook-square icon facebook-icon" aria-hidden="true"></i></span>
             </a>
         </span>
         <span class="gap"></span>
         <span>
-            <a href="tel: 0811111111" class="icon-link text-secondary">
+            <a href="tel: 0811111111" class="icon-link ">
                 <span><i class="fa fa-phone-square icon phone-icon" aria-hidden="true"></i></span>
                 <span>&nbsp;</span><span class="underline-hover">0811111111</span>
             </a>
@@ -22,7 +22,7 @@
     </div>
     <div class="d-flex flex-row">
         <span class="dropdown">
-            <a href="#" class="icon-link text-secondary "
+            <a href="#" class="icon-link "
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="payment-dropdown">
                 <div class="d-flex flex-row align-items-center">
                     <span class="underline-hover">วิธีการชำระสินค้า</span><span>&nbsp;</span>
@@ -38,7 +38,7 @@
             <span class="line-sep text-secondary"></span>
         </span>
         <span class="dropdown">
-            <a href="#" class="icon-link text-secondary "
+            <a href="#" class="icon-link "
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="help-dropdown">
                 <div class="d-flex flex-row align-items-center">
                     <span class="underline-hover">ช่วยเหลือ</span><span>&nbsp;</span>
@@ -54,7 +54,7 @@
             <span class="line-sep text-secondary"></span>
         </span>
         <span>
-            <a href="#" class="icon-link text-secondary">
+            <a href="#" class="icon-link">
                 <span class="underline-hover">ลงทะเบียน / เข้าสู่ระบบ</span>
             </a>
         </span>

@@ -37,7 +37,7 @@ html, body {
 .footer-menu {
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #cecece;
-    height: 190px;
+    /* height: 190px; */
 }
 .footer-credit {
     border-top: 1px solid #FFF;
@@ -85,6 +85,8 @@ html, body {
     justify-content: center;
     height: 100%;
     text-decoration: none !important;
+    color: #888;
+    transition: 0.5s;
 }
 .icon-link:hover {
     color: #333;
@@ -139,16 +141,19 @@ html, body {
     background-color: #e62e6b;
     color: white;
     border: none;
+    border-left: 2px solid #e62e6b;
     outline:none;
     cursor: pointer;
     height: 100%;
     width: 100px;
+    transition: 0.5s;
+}
+.search-button:hover {
+    background-color: #FFFFFF;
+    color: #e62e6b;
 }
 .suggest-search {
     padding: 4px 0;
-}
-.logo-large {
-    width: 190px;
 }
 .my-cart-wrapper{
     /* max-width: 200px; */
@@ -159,6 +164,11 @@ html, body {
     padding: 8px 12px;
     width: 150px;
     cursor: pointer;
+    transition: 0.5s;
+}
+.my-cart:hover {
+    border: 1px solid #e62e6b;
+    background: #FFFFFF;
 }
 .bag-icon {
     font-size: 16px;
@@ -224,11 +234,11 @@ background: rgba(50,50,50,0.3);
     height: 180px;
     border-radius: 5px;
     overflow: hidden;
-    transition: 0.4s linear;
+    transition: 0.5s;
     display: block;
 }
 .feature-card:hover {
-    box-shadow: 0 0 10px #333;
+    box-shadow: 0px 0px 15px 2px #aaa;
     cursor: pointer;
 }
 .feature-image {
@@ -254,6 +264,7 @@ background: rgba(50,50,50,0.3);
     background-color: white;
     overflow: hidden;
     margin-bottom: 10px;
+    height: 376px;
 }
 .product-card-wrapper:hover .product-pre-add-to-cart-text {
     visibility: visible;
@@ -262,6 +273,7 @@ background: rgba(50,50,50,0.3);
 .product-card {
     text-align: center;
     border: 1px solid white;
+    height: 342px;
 }
 .product-card-wrapper:hover .product-card {
     border-top: 1px solid rgb(230,230,230);
@@ -269,7 +281,7 @@ background: rgba(50,50,50,0.3);
     border-left: 1px solid rgb(230,230,230);
 }
 .product-pre-add-to-cart {
-    height: 40px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,7 +293,7 @@ background: rgba(50,50,50,0.3);
     width: 100%;
     transition: 0.5s;
     background-color: #e62e6b;
-    height: 40px;
+    height: 100%;
     color: white;
     font-size: 16px;
     text-align: center;
@@ -324,8 +336,72 @@ background: rgba(50,50,50,0.3);
 /* i-bar */
 .i-bar-wrapper {
     position: fixed;
-    background-color: black;
-    width: 20px;
+    background-color: #333;
     top: 0;
     right: 0;
+    z-index: 900;
+    height: 100vh;
+}
+.i-bar {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.side-icon-group {
+    height: auto;
+    width: 100%;
+    padding: 0px 4px;
+}
+.side-menu-icon {
+    color: white;
+    font-size: 24px;
+    margin: auto;
+}
+.side-icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider-large {
+    border-top: 1px solid #AAA;
+    width: 100%;
+    margin: 12px 0px;
+}
+.divider {
+    width: 100%;
+    margin: 8px 0px;
+}
+.tooltip {
+    font-size: 14px;
+}
+.tooltip .arrow {
+}
+.tooltip .tooltip-inner{
+    padding: 10px;
+}
+/* logo */
+.logo-large {
+    width: auto;
+}
+.logo-text {
+    font-size: 38px;
+}
+.logo-text-prefix {
+    color: #e62e6b;
+    background-color: #FFFFFF;
+    padding: 2px 0px 4px 0px;
+}
+.logo-text-subfix {
+    color: #FFFFFF;
+    background-color: #e62e6b;
+    padding: 2px 8px 4px 14px;
+}
+.logo-text-dotcom {
+    color: #b10de8;
+    background-color: #FFFFFF;
+    padding: 2px 0px 4px 0px;
+    font-size: 24px;
 }

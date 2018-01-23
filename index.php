@@ -10,7 +10,7 @@
 <body>
     <div class="i-bar-wrapper">
         <div class="i-bar">
-            
+            <?php include('i-bar.php'); ?>
         </div>
     </div>
     <div class="top-nav" >
@@ -73,15 +73,15 @@
         </div>
     </div>
     <div class="footer">
-        <div class="footer-menu" >
+        <!-- <div class="footer-menu" >
             <div class="container " >
                 <div class="row " >
                     <div class="col-sm-12 ">
-                        footer-menu
+                        xxx
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="footer-credit" >
             <div class="container ">
                 <div class="row " >
@@ -93,9 +93,15 @@
         </div>
     </div>
     <script src="thirdparty/popper/popper.min.js"></script> 
+    <!-- <script src="thirdparty/popper/tooltips.min.js"></script>  -->
     <script src="thirdparty/bootstrap/js/bootstrap.min.js"></script>
     <script src="thirdparty/swiper/js/swiper.min.js"></script>
     <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({
+                template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+            });
+        });
         var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',

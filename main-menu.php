@@ -8,8 +8,8 @@
             <span ><i class="fa fa-chevron-down icon down-icon" aria-hidden="true"></i></span>
         </div>
         <div class="dropdown-menu dropdown-wrapper" aria-labelledby="cat-dropdown">
-            <a class="dropdown-item text-secondary" href="#">zxczxc</a>
-            <a class="dropdown-item text-secondary" href="#">zxczxc</a>
+            <a class="dropdown-item text-secondary" href="#">หมวดหมู่สินค้าตัวอย่าง 1</a>
+            <a class="dropdown-item text-secondary" href="#">หมวดหมู่สินค้าตัวอย่าง 2</a>
         </div>
       </a>
     </span>

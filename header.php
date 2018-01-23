@@ -1,6 +1,10 @@
 <div class="header d-flex flex-row justify-content-between align-items-stretch">
     <div class="logo-large">
-        <p>Baanjane.com</p>
+        <p>
+            <span class="logo-text logo-text-prefix">Baan</span>
+            <span class="logo-text logo-text-subfix">jane</span>
+            <span class="logo-text-dotcom">.com</span>
+        </p>
     </div>
     <div class="header-search-wrapper d-flex flex-column ">
         <div class="header-search d-flex flex-row align-items-stretch justify-content-between">
@@ -11,13 +15,13 @@
             <input type="submit" class="search-button" value="ค้นหา" />
         </div>
         <div class="suggest-search">
-            <a href="#" class="text-secondary"><span class="underline-hover">เมคอัพ</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">ลิปมัน</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">Skinfood</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">ลิปแฟชั่น</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">ยกกระชับผิว</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">กระชับผิว</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">SK-II</span></a>
+            <a href="#" class="text-secondary"><span class="underline-hover">กันแดด</span></a>
         </div>
     </div>
     <div class="my-cart-wrapper">
