@@ -3,14 +3,12 @@
 <script src="thirdparty/bootstrap/js/bootstrap.min.js"></script>
 <script src="thirdparty/swiper/js/swiper.min.js"></script>
 <script>
+    console.log('bottomscript');
     $('.show-on-scroll-offset').hide();
     // spinner
-    $('#spinner').show();
-    $('#content').hide();
     $(function () {
         // spinner
-        $('#spinner').fadeOut(1500).remove();
-        $('#content').fadeIn(1000);
+        $('#spinner').fadeOut(500);
         // tooltip
         $('[data-toggle="tooltip"]').tooltip({
             template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',

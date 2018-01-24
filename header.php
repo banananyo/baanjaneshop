@@ -26,10 +26,10 @@
     </div>
     <div class="my-cart-wrapper hide-mobile-xs">
         <div class="my-cart text-secondary d-flex align-items-stretch justify-content-around">
-            <span class="d-flex align-items-stretch">
+            <div class="d-flex align-items-center">
                 <i class="fa fa-shopping-bag bag-icon" aria-hidden="true"></i>
-            </span>
-            <span>ตะกร้าของฉัน</span>
+            </div>
+            <div class="d-flex align-items-center">ตะกร้าของฉัน</div>
         </div>
     </div>
 </div>

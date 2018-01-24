@@ -1,4 +1,5 @@
 <script>
+    console.log('swiper');
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
@@ -23,6 +24,8 @@
         // scrollbar: {
         //     el: '.swiper-scrollbar',
         // },
+        speed: 400,
+        spaceBetween: 100,
 
         effect: 'slide',
     });

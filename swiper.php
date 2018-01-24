@@ -13,10 +13,10 @@
  
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev">
-        <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
     </div>
     <div class="swiper-button-next">
-        <!-- <i class="fa fa-arrow-right" aria-hidden="true"></i> -->
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
     </div>
  
     <!-- If we need scrollbar -->
