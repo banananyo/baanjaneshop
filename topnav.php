@@ -1,5 +1,5 @@
 <div class="topnav d-flex flex-row justify-content-between align-items-stretch">
-    <div class="d-flex flex-row">
+    <div class="d-flex flex-row contact-top">
         <span>
             <a href="#" class="icon-link ">
                 <span><i class="fa fa-facebook-square icon facebook-icon" aria-hidden="true"></i></span>

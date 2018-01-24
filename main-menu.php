@@ -1,5 +1,11 @@
 <nav class="main-menu">
   <div class="main-menu-inner d-flex ">
+    <a class="main-menu-link hoverable show-on-scroll-offset hide-mobile-xs" href="index.php" >
+      <img src="images/logo-small.png" alt="Baanjane.com logo" />
+    </a>
+    <a class="main-menu-link hoverable show-mobile-xs" style="padding-right: 20px;" href="index.php" >
+      <img src="images/logo-small.png" alt="Baanjane.com logo" />
+    </a>
     <span class="dropdown main-menu-link hoverable">
       <a class="text-white"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="cat-dropdown">
@@ -13,13 +19,15 @@
         </div>
       </a>
     </span>
-    <span >
+    <span class="main-menu-link hide-mobile-xs" >
         <span class="line-sep"></span>
     </span>
-    <a class="main-menu-link hoverable" href="#" class="text-white">หน้าแรก</a>
-    <a class="main-menu-link hoverable" href="#" class="text-white">สินค้าทั้งหมด</a>
-    <a class="main-menu-link hoverable" href="#" class="text-white">ค้นหาตัวแทน</a>
-    <a class="main-menu-link hoverable" href="#" class="text-white">เกี่ยวกับเรา</a>
-    <a class="main-menu-link hoverable" href="#" class="text-white">ติดต่อเรา</a>
+    
+    <a class="main-menu-link hoverable hide-mobile-xs" href="index.php" >หน้าแรก</a>
+    <a class="main-menu-link hoverable hide-mobile-xs" href="#" >สินค้าทั้งหมด</a>
+    <a class="main-menu-link hoverable " href="find_agent.php"  >ค้นหาตัวแทน</a>
+    <a class="main-menu-link hoverable show-mobile-xs" href="cart.php"  >ตะกร้า</a>
+    <a class="main-menu-link hoverable hide-mobile-xs" href="#" >เกี่ยวกับเรา</a>
+    <a class="main-menu-link hoverable hide-mobile-xs" href="#" >ติดต่อเรา</a>
   </div>
 </nav>

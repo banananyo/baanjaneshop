@@ -1,4 +1,4 @@
-<div class="header d-flex flex-row justify-content-between align-items-stretch">
+<div class="header d-flex flex-row justify-content-between align-items-stretch ">
     <div class="logo-large">
         <a href="index.php" class="logo-link">
             <span class="logo-text logo-text-prefix">Baan</span>
@@ -6,7 +6,7 @@
             <span class="logo-text-dotcom">.com</span>
         </a>
     </div>
-    <div class="header-search-wrapper d-flex flex-column ">
+    <div class="header-search-wrapper d-flex flex-column hide-mobile-xs">
         <div class="header-search d-flex flex-row align-items-stretch justify-content-between">
             <span class="bg-white d-flex align-items-center text-secondary search-icon">
                 <i class="fa fa-search icon" aria-hidden="true"></i>
@@ -24,7 +24,7 @@
             <a href="#" class="text-secondary"><span class="underline-hover">กันแดด</span></a>
         </div>
     </div>
-    <div class="my-cart-wrapper">
+    <div class="my-cart-wrapper hide-mobile-xs">
         <div class="my-cart text-secondary d-flex align-items-stretch justify-content-around">
             <span class="d-flex align-items-stretch">
                 <i class="fa fa-shopping-bag bag-icon" aria-hidden="true"></i>
