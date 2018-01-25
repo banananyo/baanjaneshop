@@ -29,7 +29,7 @@
             <div class="d-flex align-items-center">
                 <i class="fa fa-shopping-bag bag-icon" aria-hidden="true"></i>
             </div>
-            <div class="d-flex align-items-center">ตะกร้าของฉัน</div>
+            <a href="cart.php" style="text-decoration: none" class="d-flex align-items-center">ตะกร้าของฉัน</a>
         </div>
     </div>
 </div>

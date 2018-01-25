@@ -25,13 +25,13 @@
             <a href="#" class="icon-link "
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="payment-dropdown">
                 <div class="d-flex flex-row align-items-center">
-                    <span class="underline-hover">วิธีการชำระสินค้า</span><span>&nbsp;</span>
+                    <span>&nbsp;</span><span class="underline-hover">วิธีการชำระสินค้า</span><span>&nbsp;</span>
                     <span ><i class="fa fa-chevron-down icon down-icon" aria-hidden="true"></i></span>
                 </div>
             </a>
             <div class="dropdown-menu dropdown-wrapper" aria-labelledby="payment-dropdown">
-                <a class="dropdown-item text-secondary" href="#">วิธีการชำระสินค้า</a>
-                <a class="dropdown-item text-secondary" href="#">แจ้งชำระเงิน</a>
+                <a class="dropdown-item text-secondary" href="howtopay.php">วิธีการชำระสินค้า</a>
+                <a class="dropdown-item text-secondary" href="transfer_report.php">แจ้งชำระเงิน</a>
             </div>
         </span>
         <span >
@@ -46,15 +46,15 @@
                 </div>
             </a>
             <div class="dropdown-menu dropdown-wrapper" aria-labelledby="help-dropdown">
-                <a class="dropdown-item text-secondary" href="#">วิธีสั่งซื้อ</a>
-                <a class="dropdown-item text-secondary" href="#">การจัดส่ง</a>
+                <a class="dropdown-item text-secondary" href="order.php">วิธีสั่งซื้อ</a>
+                <a class="dropdown-item text-secondary" href="send.php">การจัดส่ง</a>
             </div>
         </span>
         <span >
             <span class="line-sep text-secondary"></span>
         </span>
         <span>
-            <a href="#" class="icon-link">
+            <a href="auth.php" class="icon-link">
                 <span class="underline-hover">ลงทะเบียน / เข้าสู่ระบบ</span>
             </a>
         </span>

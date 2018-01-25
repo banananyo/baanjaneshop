@@ -8,5 +8,5 @@
 <!-- for ico -->
 <!-- <link rel="shortcut icon" href="http://example.com/myicon.ico" /> -->
 <link href="https://fonts.googleapis.com/css?family=Kanit|Pattaya" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 <meta name="HandheldFriendly" content="true">

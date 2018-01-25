@@ -14,6 +14,10 @@ html, body {
     font-family: 'Kanit', sans-serif;
     background-color: #f2f2f2;
 }
+.big-search-icon{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 .mina-menu .main-menu-link img {
     object-fit: contain;
     object-position: center;
@@ -84,8 +88,11 @@ html, body {
 }
 .fixed-scroll {
     position: fixed;
-    top: 0px;
+    top: 0%;
+    left: 50%;
+    margin-left: -50%;
     height: 60px !important;
+    backface-visibility: hidden;
 }
 .col-marginbot{
     margin-bottom: 10px;
@@ -145,6 +152,13 @@ hr {
 .btn-bj {
     background-color: #e62e6b;
     color: #FFF;
+    transition: 0.4s;
+    border: 1px solid #FFF;
+}
+.btn-bj:hover {
+    border: 1px solid #e62e6b;
+    background-color: #FFF;
+    color: #e62e6b;
 }
 .swiper-banner-wrapper {
     width: 100%;
@@ -303,7 +317,12 @@ hr {
     padding: 0px 0px;
 }
 .main-menu {
-    background-color: #e62e6b;
+    background: #e62e6b;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    z-index: 899;
+    width: 100%;
 }
 .main-menu-inner {
     height: 100%;
@@ -346,15 +365,17 @@ background: rgba(50,50,50,0.3);
 }
 .swiper-button-next, .swiper-button-prev {
     background-image: none;
-    color: #333;
+    color: #FFF;
     font-size: 18px;
     transition: 0.3s;
     padding: 80px 0px;
     top: calc(50% - 80px);
+    text-shadow: 0 0 10px black;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover {
     background-image: none;
-    color: #e62e6b;
+    color: #333;
+    text-shadow: 0 0 10px white;
 }
 .slider-image {
     width: 100%;

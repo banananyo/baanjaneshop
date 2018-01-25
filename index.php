@@ -9,14 +9,14 @@
         <?php include('common/top-section.php'); ?>
     
         <div class="swiper-banner-wrapper" >
-            <?php include('swiper.php'); ?>
+            <?php include('common/swiper.php'); ?>
         </div>
         <hr />
         <div class="product-feature" >
             <div class="container" >
                 <div class="row" >
                     <div class="col-sm-12">
-                        <?php include('feature.php'); ?>
+                        <?php include('common/feature.php'); ?>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <div class="container" >
                 <div class="row" >
                     <div class="col-sm-12">
-                        <?php include('promotion.php'); ?>
+                        <?php include('common/promotion.php'); ?>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="container" >
                 <div class="row" >
                     <div class="col-sm-12">
-                        <?php include('product.php'); ?>
+                        <?php include('common/product.php'); ?>
                     </div>
                 </div>
             </div>

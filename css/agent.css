@@ -1,0 +1,13 @@
+.agent_profile_image {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #333;
+}
+.agent_profile_col{
+    /* max-width: 50vw;
+    width: 240px; */
+}
+.row {
+    margin-bottom: 10px;
+}

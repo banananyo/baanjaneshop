@@ -3,10 +3,22 @@
 <script src="thirdparty/bootstrap/js/bootstrap.min.js"></script>
 <script src="thirdparty/swiper/js/swiper.min.js"></script>
 <script>
+    var checkScroll = function() {
+        if ($(window).scrollTop() > 160) {
+            if(!$('.main-menu').hasClass( "fixed-scroll" )){
+                $('.main-menu').addClass('fixed-scroll').hide().promise().done(function() {$('.main-menu').fadeIn(500);});
+            }
+            $('.show-on-scroll-offset').show();
+        } else {
+            $('.main-menu').removeClass('fixed-scroll');
+            $('.show-on-scroll-offset').hide();
+        }
+    }
     console.log('bottomscript');
     $('.show-on-scroll-offset').hide();
     // spinner
     $(function () {
+        checkScroll();
         // spinner
         $('#spinner').fadeOut(500);
         // tooltip
@@ -16,14 +28,8 @@
 
         // nav sticky
         $(window).bind('scroll', function () {
-            console.log($(window).scrollTop());
-            if ($(window).scrollTop() > 160) {
-                $('.main-menu-wrapper').addClass('fixed-scroll');
-                $('.show-on-scroll-offset').show();
-            } else {
-                $('.main-menu-wrapper').removeClass('fixed-scroll');
-                $('.show-on-scroll-offset').hide();
-            }
+            // console.log($(window).scrollTop());
+            checkScroll();
         });
 
         
