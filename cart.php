@@ -1,3 +1,4 @@
+<?php require_once('common/sessionCheck.php'); ?>
 <html>
 <head>
 <title>ตะกร้าสินค้า - baanjane.com</title>
@@ -15,7 +16,7 @@
                     </div>
                 </div>
                 <div class="row row-eq-height justify-content-center">
-                    
+                    <?php if (!isset($_SESSION['bj_user'])) { echo '<span class="text-danger">ทำการเข้าสู่ระบบหรือสมัครสมาชิกเพื่อใช้งานระบบตะกร้า</span>' ;}?>
 				</div>
             </div>
         </div>

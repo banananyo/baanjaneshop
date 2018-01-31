@@ -1,3 +1,4 @@
+<?php require_once('common/sessionCheck.php'); ?>
 <html>
 <head>
 <title>วิธีการสั่งซื้อ - baanjane.com</title>

@@ -2,8 +2,8 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 31, 2018 at 08:04 PM
+-- Host: localhost
+-- Generation Time: Jan 31, 2018 at 03:11 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -42,30 +42,6 @@ CREATE TABLE `agent` (
   `province` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `agent`
---
-
-INSERT INTO `agent` (`id`, `code`, `fb`, `line`, `tel`, `description`, `src`, `name`, `lvl_id`, `district`, `province`) VALUES
-(1, '#บ้านเจน[SVIP10-VIP1]', 'A-nok Kanphian', 'lovetototk', '0981466476', NULL, 'images/agent/1.jpg', 'คุณโตโต้', 1, 'เมือง', 'บุรีรัมย์'),
-(2, '#บ้านเจน[SVIP11-VIP2]', 'Auauone', 'auauone', '0987431122', NULL, 'images/agent/1.jpg', 'คุณอู๋', 1, 'เมือง', 'นครราชสีมา');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
-  `member_id` int(11) NOT NULL,
-  `product_list` text NOT NULL,
-  `address` text,
-  `email` varchar(255) DEFAULT NULL,
-  `tel` varchar(255) DEFAULT NULL,
-  `reciever_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 -- --------------------------------------------------------
 
 --
@@ -74,40 +50,15 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `name` varchar(150) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `description`) VALUES
-(1, 'ลิปแมท', NULL),
-(2, 'ครีมกระชับผิว', NULL),
-(3, 'ครีมกันแดด', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `customer`
---
-
-CREATE TABLE `customer` (
-  `id` int(11) NOT NULL,
-  `fullname` varchar(255) NOT NULL,
-  `address` text,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `tel` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`id`, `fullname`, `address`, `email`, `password`, `tel`) VALUES
-(1, 'wadjakorn tonsri', '141 mooh 8', 'wazjakorn@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0819543611');
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'หมวดหมู่ 1');
 
 -- --------------------------------------------------------
 
@@ -147,34 +98,34 @@ CREATE TABLE `lvl` (
   `src` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `lvl`
---
-
-INSERT INTO `lvl` (`id`, `name`, `description`, `src`) VALUES
-(1, 'vip', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Table structure for table `member`
 --
 
-CREATE TABLE `orders` (
+CREATE TABLE `member` (
   `id` int(11) NOT NULL,
-  `orders_ref` varchar(255) NOT NULL,
-  `status` varchar(3) NOT NULL,
-  `member_id` int(11) NOT NULL,
-  `products` text NOT NULL,
-  `order_datetime` datetime NOT NULL,
-  `address` text NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `tel` varchar(255) DEFAULT NULL,
-  `ems` varchar(200) DEFAULT NULL,
-  `info` text NOT NULL,
-  `reciever_name` varchar(255) NOT NULL,
-  `total_price` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `level` int(11) NOT NULL,
+  `name` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `address` text COLLATE utf8_unicode_ci NOT NULL,
+  `tel` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `facebook_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `key` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id`, `username`, `password`, `email`, `level`, `name`, `address`, `tel`, `facebook_token`, `image`, `status`, `key`) VALUES
+(1, 'admin', '', 'iboommm@live.com', 1, 'Admin Admin', '', '', NULL, '31012018142700.jpg', 1, NULL),
+(9, 'baze', '', 'wazjakorn@gmail.com', 1, 'baze tonsri', '141', '123456789', NULL, '31012018142654.jpg', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -196,22 +147,14 @@ CREATE TABLE `page_content` (
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `description` text NOT NULL,
   `alt` text NOT NULL,
   `src` text NOT NULL,
   `price` double NOT NULL,
   `sale_price` double DEFAULT NULL,
-  `in_stock` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL
+  `in_stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `name`, `description`, `alt`, `src`, `price`, `sale_price`, `in_stock`, `category_id`) VALUES
-(1, 'Pleaseme-lip-mattedee-no-01', 'Pleaseme-lip-mattedee-no-01', 'Pleaseme-lip-mattedee-no-01', 'images/product/Pleaseme-lip-mattedee-no-01.jpg', 550, 450, 10, 1),
-(2, 'Pleaseme-lip-mattedee-no-02', 'Pleaseme-lip-mattedee-no-02', 'Pleaseme-lip-mattedee-no-02', 'images/product/Pleaseme-lip-mattedee-no-02.jpg', 550, 450, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -249,21 +192,9 @@ ALTER TABLE `agent`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `customer`
---
-ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -285,10 +216,12 @@ ALTER TABLE `lvl`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Indexes for table `member`
 --
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `page_content`
@@ -322,21 +255,11 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `agent`
 --
 ALTER TABLE `agent`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `cart`
---
-ALTER TABLE `cart`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `hot_product`
@@ -352,12 +275,12 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT for table `lvl`
 --
 ALTER TABLE `lvl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT for table `member`
 --
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+ALTER TABLE `member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `page_content`
 --
@@ -367,7 +290,7 @@ ALTER TABLE `page_content`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `promotion`
 --

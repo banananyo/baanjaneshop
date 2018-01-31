@@ -14,7 +14,7 @@
             $('.show-on-scroll-offset').hide();
         }
     }
-    console.log('bottomscript');
+    // console.log('bottomscript');
     $('.show-on-scroll-offset').hide();
     // spinner
     $(function () {

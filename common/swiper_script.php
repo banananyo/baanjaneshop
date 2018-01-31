@@ -1,5 +1,5 @@
 <script>
-    console.log('swiper');
+    // console.log('swiper');
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
