@@ -14,12 +14,16 @@
             <span ><i class="fa fa-chevron-down icon down-icon" aria-hidden="true"></i></span>
         </div>
         <div class="dropdown-menu dropdown-wrapper" aria-labelledby="cat-dropdown">
-            <a class="dropdown-item text-secondary" href="#">หมวดหมู่สินค้าตัวอย่าง 1</a>
-            <a class="dropdown-item text-secondary" href="#">หมวดหมู่สินค้าตัวอย่าง 2</a>
+            <?php require_once('connect.php');
+              $q_cat = $conn->query("SELECT * FROM category ORDER BY id DESC LIMIT 10");
+              while ($row_cat = $q_cat->fetch_assoc()) {
+            ?>
+              <a class="dropdown-item text-secondary" onclick="goSearch('find_product.php', '<?php echo $row_cat['name']; ?>')" ><?php echo $row_cat['name']; ?></a>
+            <?php } ?>
         </div>
       </a>
     </span>
-    <span class="main-menu-link hide-mobile-xs" >
+    <span class=" hide-mobile-xs" >
         <span class="line-sep"></span>
     </span>
     
