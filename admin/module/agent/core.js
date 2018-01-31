@@ -2,12 +2,15 @@ app.controller("add", function($scope, appService) {
     let self = this;
 
     self.field = {
-        name: "",
-        description: "",
-        image: "",
-        price: "",
-        stock: "",
-        category_id: ""
+        code:"",
+        name:"",
+        fb:"",
+        line:"",
+        tel:"",
+        lvl_id:"",
+        district:"",
+        province:"",
+        image:""
     };
 
     self.check = () => {
@@ -39,7 +42,7 @@ app.controller("manage", function($scope, appService) {
     };
 
     self.goRemove = () => {
-        location.href = "index.php?module=product&mode=remove&id=" + self.tmp.id;
+        location.href = "index.php?module=member&mode=remove&id=" + self.tmp.id;
     }
 
     self.cancelRemove = () => {

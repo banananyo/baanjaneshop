@@ -2,16 +2,15 @@ app.controller("add", function($scope, appService) {
     let self = this;
 
     self.field = {
-        name: "",
-        image: "",
-        order: ""
+        image:"",
+        name:"",
+        description: ""
     };
 
     self.check = () => {
         let result = true;
         $.each(self.field, function(key, value) {
-            // console.log(self.field[key]);
-            if (self.field[key] == '') {
+            if (self.field[key] == '' || self.field[key] == null) {
                 result = false;
             }
         });
@@ -37,7 +36,7 @@ app.controller("manage", function($scope, appService) {
     };
 
     self.goRemove = () => {
-        location.href = "index.php?module=gallery&mode=remove&id=" + self.tmp.id;
+        location.href = "index.php?module=lvl&mode=remove&id=" + self.tmp.id;
     }
 
     self.cancelRemove = () => {

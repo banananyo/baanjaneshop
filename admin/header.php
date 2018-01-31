@@ -122,6 +122,30 @@ $avatar = Connect::conn()->get("member","image",['username'=> $_SESSION['BAABJAN
             <li><a href="index.php?module=member&mode=manage"><i class="fa fa-users"></i> จัดการสมาชิก</a></li>
           </ul>
         </li>
+        <li class="treeview <?=($_GET['module'] == "agent" ? 'active':'' )?>">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>ตัวแทน</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?module=agent&mode=add"><i class="fa fa-user-plus"></i> เพิ่มตัวแทน</a></li>
+            <li><a href="index.php?module=agent&mode=manage"><i class="fa fa-users"></i> จัดการตัวแทน</a></li>
+          </ul>
+        </li>
+        <li class="treeview <?=($_GET['module'] == "lvl" ? 'active':'' )?>">
+          <a href="#">
+            <i class="fa fa-server"></i> <span>ระดับตัวแทน</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?module=lvl&mode=add"><i class="fa fa-user-plus"></i> เพิ่มระดับตัวแทน</a></li>
+            <li><a href="index.php?module=lvl&mode=manage"><i class="fa fa-users"></i> จัดการระดับตัวแทน</a></li>
+          </ul>
+        </li>
         <li class="header">PRODUCT SYSTEM</li>
         <li class="treeview  <?=($_GET['module'] == "category" ? 'active':'' )?>">
           <a href="#">
