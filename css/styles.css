@@ -14,6 +14,29 @@ html, body {
     font-family: 'Kanit', sans-serif;
     background-color: #f2f2f2;
 }
+.prompt-register {
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+}
+.clickable {
+    cursor: pointer !important;
+}
+.paging-button {
+    display: inline-flex;
+    padding: 0 8px 0 8px;
+}
+.paging-button.active {
+    background-color: #7a042c;
+    color: #FFF;
+    transition: 0.4s;
+    border: 1px solid white;
+}
+.paging-button.active:hover {
+    background-color: #7a042c;
+    color: #FFF;
+    transition: 0.4s;
+    border: 1px solid white;
+}
 .big-search-icon{
     font-size: 40px;
     margin-bottom: 10px;
@@ -155,6 +178,7 @@ hr {
     transition: 0.4s;
     border: 1px solid #FFF;
 }
+
 .btn-bj:hover {
     border: 1px solid #e62e6b;
     background-color: #FFF;
@@ -229,6 +253,7 @@ hr {
 }
 .underline-hover:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 .line-sep {
     border-left: 1px solid #DDD !important;

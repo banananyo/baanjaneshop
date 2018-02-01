@@ -53,10 +53,18 @@
         <span >
             <span class="line-sep text-secondary"></span>
         </span>
-        <span>
-            <a href="auth.php" class="icon-link">
-                <span class="underline-hover">ลงทะเบียน / เข้าสู่ระบบ</span>
-            </a>
-        </span>
+        <?php if (!isset($_SESSION['bj_user'])) {?>
+            <span>
+                <a href="auth.php" class="icon-link">
+                    <span class="underline-hover">ลงทะเบียน / เข้าสู่ระบบ</span>
+                </a>
+            </span>
+        <?php } else { ?>
+            <span>
+                <a href="common/logout.php" class="icon-link">
+                    <span class="underline-hover">ออกจากระบบ</span>
+                </a>
+            </span>
+        <?php } ?>
     </div>
 </div>

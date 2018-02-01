@@ -15,13 +15,13 @@
             <input type="submit" class="search-button" value="ค้นหา" />
         </div>
         <div class="suggest-search">
-            <a href="#" class="text-secondary"><span class="underline-hover">ลิปแมท</span></a>
+            <a onclick="goSearch('find_product.php', 'ลิปแมท')" class="text-secondary clickable"><span class="underline-hover">ลิปแมท</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">sureeporn</span></a>
+            <a onclick="goSearch('find_product.php', 'sureeporn')" class="text-secondary clickable"><span class="underline-hover">sureeporn</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">กระชับผิว</span></a>
+            <a onclick="goSearch('find_product.php', 'กระชับผิว')" class="text-secondary clickable"><span class="underline-hover">กระชับผิว</span></a>
             <span class="line-sep text-secondary"></span>
-            <a href="#" class="text-secondary"><span class="underline-hover">กันแดด</span></a>
+            <a onclick="goSearch('find_product.php', 'กันแดด')" class="text-secondary clickable"><span class="underline-hover">กันแดด</span></a>
         </div>
     </div>
     <div class="my-cart-wrapper hide-mobile-xs">

@@ -1,3 +1,4 @@
+<?php require_once('common/sessionCheck.php'); ?>
 <html>
 <head>
 <title>ประวัติการสั่งซื้อ - baanjane.com</title>
@@ -15,7 +16,7 @@
                     </div>
                 </div>
                 <div class="row row-eq-height justify-content-center">
-                    
+                    <?php if (!isset($_SESSION['bj_user'])) { echo '<span class="text-danger">ทำการเข้าสู่ระบบหรือสมัครสมาชิกเพื่อใช้งานประวัติการสั่งซื้อ</span>' ;}?>
 				</div>
             </div>
         </div>

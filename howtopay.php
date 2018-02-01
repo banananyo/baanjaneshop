@@ -1,3 +1,4 @@
+<?php require_once('common/sessionCheck.php'); ?>
 <html>
 <head>
 <title>วิธีการชำระเงิน - baanjane.com</title>
