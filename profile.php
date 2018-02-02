@@ -16,9 +16,9 @@
                     </div>
                 </div>
                 <?php 
-                require_once('connect.php');
-                $customer_id = $_SESSION['bj_user']['id'];
+                
                 if(isset($_POST['editGeneral'])) {
+                    $customer_id = $_SESSION['bj_user']['id'];
                     $query_user = "UPDATE `customer` SET `fullname`=?,`address`=?,`tel`=? WHERE id=$customer_id";
                     $stmt = $conn->prepare($query_user);
                     $stmt->bind_param('sss', $_POST['fullname'],  $_POST['address'], $_POST['tel']);
@@ -29,6 +29,7 @@
                     $stmt->close();
                     
                 } else if (isset($_POST['editPassword'])) {
+                    $customer_id = $_SESSION['bj_user']['id'];
                     if ($_POST['newpassword'] == $_POST['confirmnewpassword']) {
                         $query_user = "SELECT * FROM customer WHERE id=? AND password=?";
                         $stmt = $conn->prepare($query_user);
@@ -70,7 +71,6 @@
                 <?php } else {
                     $q_profile = $conn->query("SELECT * FROM customer WHERE id=$customer_id");
                     $profile = $q_profile->fetch_assoc();
-                    $conn->close();
                 ?>
                 <form class="row row-eq-height justify-content-center" method="POST" action="profile.php">
                     <input type="hidden" name="editGeneral" value="true" />
