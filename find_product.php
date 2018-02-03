@@ -88,14 +88,9 @@
                 // print_r($sql);
                 $prod_query = $conn->query($sql);
                 while($prod_row = $prod_query->fetch_assoc()){?>
-                    
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                     <?php 
                     include('common/product_card.php');
                     ?>
-
-                    </div> <!-- col -->
-                    
                 <?php } ?>
                 
             </div>

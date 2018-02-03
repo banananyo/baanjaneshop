@@ -57,7 +57,14 @@ if ($row = $p_res->fetch_assoc()) {
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <button class="btn-bj clickable" onclick="goProd({ p: <?php echo $p['id'];?> })">เพิ่มลงในตะกร้า</button>
+                                        <button class="btn-bj clickable" 
+                                            onclick="
+                                            <?php if (isset($_SESSION['bj_user'])) {?>
+                                                    addToCart('<?php echo $prod_row['pid']?>')<?php 
+                                                } else {?>
+                                                    alert('กรุณาทำการเข้าสู่ระบบก่อนที่จำดำเนินการ')<?php 
+                                                } ?>"
+                                        >เพิ่มลงในตะกร้า</button>
                                     </td>
                                 </tr>
                             </tbody>
