@@ -10,7 +10,6 @@
         <?php include('common/top-section.php'); ?>
         <?php
         if(isset($_POST['email']) && isset($_POST['password'])) {
-            require_once('connect.php');
             $query_user = "SELECT id, fullname, address, email, tel FROM customer WHERE email=? AND password=?";
             $stmt = $conn->prepare($query_user);
             $stmt->bind_param('ss', $_POST['email'],  md5($_POST['password']));

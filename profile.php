@@ -16,9 +16,9 @@
                     </div>
                 </div>
                 <?php 
-                require_once('connect.php');
-                $customer_id = $_SESSION['bj_user']['id'];
+                
                 if(isset($_POST['editGeneral'])) {
+                    $customer_id = $_SESSION['bj_user']['id'];
                     $query_user = "UPDATE `customer` SET `fullname`=?,`address`=?,`tel`=? WHERE id=$customer_id";
                     $stmt = $conn->prepare($query_user);
                     $stmt->bind_param('sss', $_POST['fullname'],  $_POST['address'], $_POST['tel']);
@@ -29,6 +29,7 @@
                     $stmt->close();
                     
                 } else if (isset($_POST['editPassword'])) {
+                    $customer_id = $_SESSION['bj_user']['id'];
                     if ($_POST['newpassword'] == $_POST['confirmnewpassword']) {
                         $query_user = "SELECT * FROM customer WHERE id=? AND password=?";
                         $stmt = $conn->prepare($query_user);
@@ -68,52 +69,52 @@
                     <span class="text-danger">ทำการเข้าสู่ระบบหรือสมัครสมาชิกเพื่อใช้งานระบบข้อมูลส่วนตัว</span>
                 </div>
                 <?php } else {
+                    $customer_id = $_SESSION['bj_user']['id'];
                     $q_profile = $conn->query("SELECT * FROM customer WHERE id=$customer_id");
                     $profile = $q_profile->fetch_assoc();
-                    $conn->close();
                 ?>
                 <form class="row row-eq-height justify-content-center" method="POST" action="profile.php">
                     <input type="hidden" name="editGeneral" value="true" />
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-10">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-10">
                         <div class="form-group row">
-							<label for="agent_name" class="col-sm-2 col-form-label">อีเมล</label>
-							<div class="col-sm-10">
+							<label for="agent_name" class="col-12 col-sm-12 col-md-4 col-lg-2 col-form-label">อีเมล</label>
+							<div class="col-12 col-sm-12 col-md-8 col-lg-10">
 								<input type="text" class="form-control" id="email" name="email" placeholder="อีเมล" value="<?php echo $profile['email']; ?>" readOnly />
 							</div>
                         </div>
 						<div class="form-group row">
-							<label for="agent_name" class="col-sm-2 col-form-label">ชื่อจริง</label>
-							<div class="col-sm-10">
+							<label for="agent_name" class="col-12 col-sm-12 col-md-4 col-lg-2 col-form-label">ชื่อจริง</label>
+							<div class="col-12 col-sm-12 col-md-8 col-lg-10">
 								<input type="text" class="form-control editable" id="fullname" name="fullname" placeholder="ชื่อจริง" value="<?php echo $profile['fullname']; ?>" readOnly />
 							</div>
                         </div>
                         <div class="form-group row">
-							<label for="agent_name" class="col-sm-2 col-form-label">หมายเลขโทรศัพท์</label>
-							<div class="col-sm-10">
+							<label for="agent_name" class="col-12 col-sm-12 col-md-4 col-lg-2 col-form-label">หมายเลขโทรศัพท์</label>
+							<div class="col-12 col-sm-12 col-md-8 col-lg-10">
 								<input type="text" class="form-control editable" id="tel" name="tel" placeholder="หมายเลขโทรศัพท์" value="<?php echo $profile['tel']; ?>" readOnly />
 							</div>
                         </div>
                         <div class="form-group row">
-							<label for="agent_name" class="col-sm-2 col-form-label">ที่อยู่ในการจัดส่ง</label>
-							<div class="col-sm-10">
+							<label for="agent_name" class="col-12 col-sm-12 col-md-4 col-lg-2 col-form-label">ที่อยู่ในการจัดส่ง</label>
+							<div class="col-12 col-sm-12 col-md-8 col-lg-10">
 								<input type="text" class="form-control editable" id="address" name="address" placeholder="ที่อยู่ในการจัดส่ง" value="<?php echo $profile['address']; ?>" readOnly />
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-4 col-md-4 col-lg-2 d-flex flex-row">
-                        <button class="btn btn-bj btn-full" type="submit">
+                        <button class="btn btn-bj btn-full" type="submit" style="margin-bottom: 1rem;">
                             <i class="fa fa-address-book big-search-icon"></i><br/>อัพเดทข้อมูล
                         </button>
                     </div>
                     
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-4">
                         <button class="btn btn-bj btn-full" type="button" onclick="toggleEdit()" >
-                            เปิด / ปิดการแก้ไขทั่วไป
+                            <i class="fa fa-address-card big-search-icon"></i><br/>แก้ไขข้อมูลทั่วไป
                         </button>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-4">
                         <button class="btn btn-bj btn-full" type="button" onclick="togglePassword()" >
-                            เปิด / ปิดการแก้ไขรหัสผ่าน
+                            <i class="fa fa-angle-double-down big-search-icon"></i><br/>แก้ไขรหัสผ่าน
                         </button>
                     </div>
                 </form>

@@ -7,8 +7,6 @@
 <body>
     <?php include('common/spinner.php'); ?>
     <?php
-        
-        require_once('connect.php');
         $max_per_page = 16;
         $max_buttons = 5;
         $min_max_out = 2;
@@ -90,23 +88,10 @@
                 // print_r($sql);
                 $prod_query = $conn->query($sql);
                 while($prod_row = $prod_query->fetch_assoc()){?>
-                    
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-
-                        <div class="product-card-wrapper">
-                            <div class="product-card">
-                                <a class="product-pre-image-wrapper" href="#">
-                                    <img src="<?php echo $prod_row['src']; ?>" alt="<?php echo $prod_row['alt']; ?>" class="product-pre-image" />
-                                </a>
-                                <div class="product-pre-title"><a href="#"><?php echo $prod_row['pname']; ?></a></div>
-                                <div class="product-pre-price"><?php echo $prod_row['sale_price']; ?></div>
-                            </div>
-                            <div class="product-pre-add-to-cart" onclick="addToCart('<?php echo $prod_row['pid']?>')"><div class="product-pre-add-to-cart-text">หยิบใส่ตะกร้า</div></div>
-                        </div>
-
-                    </div> <!-- col -->
-                    
-                <?php } $conn->close();?>
+                    <?php 
+                    include('common/product_card.php');
+                    ?>
+                <?php } ?>
                 
             </div>
         </div>

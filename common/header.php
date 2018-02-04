@@ -7,13 +7,13 @@
         </a>
     </div>
     <div class="header-search-wrapper d-flex flex-column hide-mobile-xs">
-        <div class="header-search d-flex flex-row align-items-stretch justify-content-between">
+        <form method="GET" action="find_product.php" class="header-search d-flex flex-row align-items-stretch justify-content-between">
             <span class="bg-white d-flex align-items-center text-secondary search-icon">
                 <i class="fa fa-search icon" aria-hidden="true"></i>
             </span>
-            <input type="text" class="invisible-input text-secondary search-input" placeholder="ค้นหาสินค้า" />
+            <input type="text" name="q" class="invisible-input text-secondary search-input" placeholder="ค้นหาสินค้า" />
             <input type="submit" class="search-button" value="ค้นหา" />
-        </div>
+        </form>
         <div class="suggest-search">
             <a onclick="goSearch('find_product.php', 'ลิปแมท')" class="text-secondary clickable"><span class="underline-hover">ลิปแมท</span></a>
             <span class="line-sep text-secondary"></span>

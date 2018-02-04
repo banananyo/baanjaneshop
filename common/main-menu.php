@@ -14,7 +14,7 @@
             <span ><i class="fa fa-chevron-down icon down-icon" aria-hidden="true"></i></span>
         </div>
         <div class="dropdown-menu dropdown-wrapper" aria-labelledby="cat-dropdown">
-            <?php require_once('connect.php');
+            <?php
               $q_cat = $conn->query("SELECT * FROM category ORDER BY id DESC LIMIT 10");
               while ($row_cat = $q_cat->fetch_assoc()) {
             ?>
@@ -23,7 +23,7 @@
         </div>
       </a>
     </span>
-    <span class=" hide-mobile-xs" >
+    <span class=" hide-mobile-xs" style="display: flex; align-items: center;">
         <span class="line-sep"></span>
     </span>
     
@@ -32,7 +32,8 @@
     <a class="main-menu-link hoverable hide-mobile-xs" href="find_agent.php" >ค้นหาตัวแทน</a>
     <a class="main-menu-link hoverable hide-mobile-xs" href="about.php" >เกี่ยวกับเรา</a>
     <a class="main-menu-link hoverable hide-mobile-xs" href="contact.php" >ติดต่อเรา</a>
-    <span class="dropdown main-menu-link hoverable show-mobile-xs" style="display: flex; justify-content: flex-end; width: calc(100% - 58px);">
+    <span class="show-mobile-xs" style="width: 280px"></span>
+    <span class="dropdown dropleft main-menu-link hoverable show-mobile-xs" style="display: flex; justify-content: flex-end; width: calc(100% - 338px);">
       <a class="text-white" 
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="mobile-menu-dropdown">
         <div class="d-flex flex-row align-items-center">
@@ -41,6 +42,9 @@
         <div class="dropdown-menu dropdown-wrapper" aria-labelledby="mobile-menu-dropdown">
             <a class="dropdown-item text-secondary" href="find_product.php">สินค้าทั้งหมด</a>
             <a class="dropdown-item text-secondary" href="find_agent.php">ค้นหาตัวแทน</a>
+            <a class="dropdown-item text-secondary" href="profile.php">ข้อมูลส่วนตัว</a>
+            <a class="dropdown-item text-secondary" href="cart.php">ตะกร้าสินค้า</a>
+            <a class="dropdown-item text-secondary" href="order_history.php">ประวัติการสั่งซื้อ</a>
             <a class="dropdown-item text-secondary" href="about.php">เกี่ยวกับเรา</a>
             <a class="dropdown-item text-secondary" href="contact.php">ติดต่อเรา</a>
         </div>

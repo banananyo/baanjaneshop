@@ -8,8 +8,6 @@
 <body>
     <?php include('common/spinner.php'); ?>
     <?php
-        
-        require_once('connect.php');
         $max_per_page = 10;
         $max_buttons = 5;
         $min_max_out = 2;
@@ -161,7 +159,7 @@
                         </div> <!-- col -->
                         <div class="divider-large"></div>
                     </div> <!-- row -->
-                    <?php } $conn->close();?>
+                    <?php } ?>
                 </div>
             </div>
         </div>

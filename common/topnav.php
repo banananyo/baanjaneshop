@@ -1,19 +1,19 @@
 <div class="topnav d-flex flex-row justify-content-between align-items-stretch">
     <div class="d-flex flex-row contact-top">
-        <span>
+        <span class="hide-mobile-xs">
             <a href="#" class="icon-link ">
                 <span><i class="fa fa-facebook-square icon facebook-icon" aria-hidden="true"></i></span>
             </a>
         </span>
-        <span class="gap"></span>
-        <span>
+        <span class="gap hide-mobile-xs"></span>
+        <span class="hide-mobile-xs">
             <a href="tel: 0811111111" class="icon-link ">
                 <span><i class="fa fa-phone-square icon phone-icon" aria-hidden="true"></i></span>
                 <span>&nbsp;</span><span class="underline-hover">0811111111</span>
             </a>
         </span>
-        <span class="gap"></span>
-        <span>
+        <span class="gap hide-mobile-xs"></span>
+        <span class="hide-mobile-xs">
             <a href="#" class="icon-link text-secondary">
                 <span><img src="images/icon/line.png" class="icon line-icon"/></span>
                 <span>&nbsp;@</span><span class="underline-hover">baanjane.com</span>
@@ -32,12 +32,15 @@
             <div class="dropdown-menu dropdown-wrapper" aria-labelledby="payment-dropdown">
                 <a class="dropdown-item text-secondary" href="howtopay.php">วิธีการชำระสินค้า</a>
                 <a class="dropdown-item text-secondary" href="transfer_report.php">แจ้งชำระเงิน</a>
+
+                <a class="dropdown-item text-secondary show-mobile-xs" href="order.php">วิธีสั่งซื้อ</a>
+                <a class="dropdown-item text-secondary show-mobile-xs" href="send.php">การจัดส่ง</a>
             </div>
         </span>
-        <span >
+        <span class="hide-mobile-xs" >
             <span class="line-sep text-secondary"></span>
         </span>
-        <span class="dropdown">
+        <span class="dropdown hide-mobile-xs">
             <a href="#" class="icon-link "
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="help-dropdown">
                 <div class="d-flex flex-row align-items-center">
@@ -62,7 +65,7 @@
         <?php } else { ?>
             <span>
                 <a href="common/logout.php" class="icon-link">
-                    <span class="underline-hover">ออกจากระบบ</span>
+                    <span class="underline-hover"><?php echo $_SESSION['bj_user']['fullname']; ?> / ออกจากระบบ</span>
                 </a>
             </span>
         <?php } ?>
